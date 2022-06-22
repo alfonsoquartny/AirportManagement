@@ -17,7 +17,7 @@ public class aiController : MonoBehaviour
     private bool isWalk;
     public GameObject entry;
 
-    private GameObject planeBarObject;
+    public GameObject planeBarObject;
     public Image planeBar;
     private bool winCust;
     public float npcBusyTimer;
