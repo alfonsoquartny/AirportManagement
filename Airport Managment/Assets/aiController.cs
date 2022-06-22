@@ -29,9 +29,12 @@ public class aiController : MonoBehaviour
 
     public bar _bar;
 
+    public int randomLoby;
     public bool leaved;
     void Start()
     {
+        randomLoby = Random.Range(10, 55);
+
         entry = GameObject.FindGameObjectWithTag("entry");
         exit = GameObject.FindGameObjectWithTag("exit");
         animator = gameObject.GetComponent<Animator>();
@@ -79,7 +82,6 @@ public class aiController : MonoBehaviour
 
         if (npcBusy == false)
         {
-            var randomLoby = Random.Range(10, 55);
            planeBar.fillAmount -= Time.deltaTime/randomLoby;
             _navmeshAgent.SetDestination(Target.transform.position);
             _navmeshAgent.speed = 3.5f;
