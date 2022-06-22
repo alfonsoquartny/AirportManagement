@@ -1745,6 +1745,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8304135526336400242}
+  - component: {fileID: 7218089087300172447}
   m_Layer: 0
   m_Name: spawnZone
   m_TagString: Desktop
@@ -1768,6 +1769,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &7218089087300172447
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8304135526336400205}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 7.2098436, y: 2.2614193, z: 3.9795513}
+  m_Center: {x: 1.0751901, y: 0.63070977, z: -0.5360257}
 --- !u!1 &8306600671125495189
 GameObject:
   m_ObjectHideFlags: 0

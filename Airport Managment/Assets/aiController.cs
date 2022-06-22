@@ -27,7 +27,6 @@ public class aiController : MonoBehaviour
     public bool loseCust;
     public GameObject angryImage;
 
-    public bar _bar;
 
     public int randomLoby;
     public bool leaved;
@@ -47,7 +46,6 @@ public class aiController : MonoBehaviour
         planeBar.fillAmount = 1;
         _navmeshAgent.speed = 0;
 
-        _bar = GetComponentInChildren<bar>();
     }
 
     void Update()
