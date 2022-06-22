@@ -14,7 +14,9 @@ public class aiController : MonoBehaviour
 
     private Animator animator;
 
-    private bool isWalk;
+    public bool masaTemas;
+
+    public bool isWalk;
     public GameObject entry;
 
     public GameObject planeBarObject;
@@ -22,7 +24,7 @@ public class aiController : MonoBehaviour
     private bool winCust;
     public float npcBusyTimer;
 
-    public bool masaTemas;
+
 
     public bool loseCust;
     public GameObject angryImage;
@@ -50,13 +52,18 @@ public class aiController : MonoBehaviour
 
     void Update()
     {
+        if (masaTemas == true)
+        {
+            isWalk = false;
+        }
+        
         if (isWalk == true)
         {
-            animator.SetBool("isWalk",isWalk);
+            animator.SetBool("isWalk",true);
         }
         if (isWalk == false)
         {
-            animator.SetBool("isWalk",isWalk);
+            animator.SetBool("isWalk",false);
         }
         if (loseCust==true)
         {
@@ -67,7 +74,7 @@ public class aiController : MonoBehaviour
             npcBusy = true;
            angryImage.SetActive(true);
             Destroy(gameObject, 11f);
-            isWalk = false;
+            isWalk = true;
         }
         if (winCust == true)
         {
@@ -92,11 +99,18 @@ public class aiController : MonoBehaviour
             npcBusyTimer -= Time.deltaTime * 2;
            
             Destroy(planeBarObject);
-            isWalk = true;
 
 
         }
 
+        if (npcBusy == true && masaTemas == false)
+        {
+            isWalk = true;
+        }
+        if (npcBusy == true && masaTemas == true)
+        {
+            isWalk = true;
+        }
         if (npcBusyTimer < 0)
         {
             winCust = true;
@@ -110,16 +124,15 @@ public class aiController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Desktop"))
         {
-            isWalk = false;
+            Target = null;
+            Debug.Log("masa");
+            masaTemas = true;
         }
     }
-
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Desktop"))
-        {
-            isWalk = true;
-        }
+        masaTemas = false;
     }
+
 
 }

@@ -28,22 +28,6 @@ public class spawnZoneManagment : MonoBehaviour
             animator.SetBool("isWalk", true);
         }
     }
-    private void OnTriggerEnter(Collider other)
-    {
-      if (other.gameObject.CompareTag("npc"))
-      {
-            temas = true;
-            animator=other.gameObject.GetComponent<Animator>();
-      }
-    }
 
-    private void OnTriggerExit(Collider other)
-    {
-        temas = false;
-        if (other.gameObject.CompareTag("npc"))
-        {
-           
-        }
-    }
 
 }
