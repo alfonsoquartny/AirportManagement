@@ -10,6 +10,10 @@ public class spawnZoneManagment : MonoBehaviour
     public bool temas;
 
     public Animator animator;
+
+    public MeshRenderer mesh1;
+    public MeshRenderer mesh2;
+    public MeshRenderer mesh3;
     void Start()
     {
         
@@ -18,6 +22,14 @@ public class spawnZoneManagment : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (working == true)
+        {
+            mesh1.enabled=false;
+            mesh2.enabled = false;
+            mesh3.enabled = false;
+
+        }
         if (temas == true)
         {
             animator.SetBool("isWalk", false);
@@ -27,6 +39,8 @@ public class spawnZoneManagment : MonoBehaviour
         {
             animator.SetBool("isWalk", true);
         }
+
+      
     }
 
 
