@@ -35,8 +35,7 @@ public class spawnZoneManagment : MonoBehaviour
         }
         else
         {
-            controller.isWalk = true;
-            controller = null;
+            controller.isWalk=true;
         }
 
       
