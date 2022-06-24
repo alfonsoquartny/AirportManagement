@@ -9,8 +9,7 @@ public class spawnZoneManagment : MonoBehaviour
     public bool working;
     public bool temas;
 
-    public Animator animator;
-
+    public aiController controller;
     public MeshRenderer mesh1;
     public MeshRenderer mesh2;
     public MeshRenderer mesh3;
@@ -32,16 +31,31 @@ public class spawnZoneManagment : MonoBehaviour
         }
         if (temas == true)
         {
-            animator.SetBool("isWalk", false);
-
+            controller.isWalk = false;
         }
         else
         {
-            animator.SetBool("isWalk", true);
+            controller.isWalk = true;
+            controller = null;
         }
 
       
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("npc"))
+        {
+            temas = true;
+            controller= other.GetComponent<aiController>();
+        }
+    }
 
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("npc"))
+        {
+            temas = false;
+        }
+    }
 
 }
