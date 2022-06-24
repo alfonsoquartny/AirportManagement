@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class managment : MonoBehaviour
 {
     Vector3 touchPosWorld;
@@ -12,6 +12,9 @@ public class managment : MonoBehaviour
     public spawnZoneManagment spawnManagment;
     public aiController _aiController;
 
+   public money money;
+    private GameObject valueObject;
+    private value value;
     private bool selected;
 
     public GameObject selectedNPC;
@@ -23,7 +26,6 @@ public class managment : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
 
             if (Input.touchCount == 1 && Input.GetTouch(0).phase == touchPhase)
             {
@@ -39,6 +41,7 @@ public class managment : MonoBehaviour
                 {
 
                     GameObject touchedObject = hit.transform.gameObject;
+
                     if (hit.transform.gameObject.name == "npc")
                     {
                         selectedNPC = hit.transform.gameObject;
@@ -54,11 +57,20 @@ public class managment : MonoBehaviour
 
 
                     Debug.Log("Touched " + touchedObject.transform.name);
-                   if(touchedObject.transform.name=="SpawnZone"||touchedObject.transform.name== "spawnZone(Clone)")
-                   {
-                        if (spawnManagment.working == false)
+                    if (touchedObject.transform.name == "SpawnZone")
+                    {
+                        valueObject = touchedObject;
+                        value = touchedObject.GetComponent<value>();
+                    }
+                        if (touchedObject.transform.name=="SpawnZone"||touchedObject.transform.name== "spawnZone(Clone)")
                         {
+                      
+                        if (spawnManagment.working == false&&money.moneyInt>=value.valueMoney)
+                        {
+
                             Instantiate(prefab, touchedObject.transform);
+                            money.moneyInt = money.moneyInt - value.valueMoney;
+
                             spawnManagment.working = true;
                         }
 
@@ -67,16 +79,19 @@ public class managment : MonoBehaviour
                            _aiController.Target=touchedObject;
                            spawnManagment.busy = true;
                         }
+                       
 
                        
-                    }
+                        }
 
                     
                 }
+
             }
 
             _aiController = selectedNPC.GetComponent<aiController>();
         }
+
       
 
     }

@@ -21,17 +21,21 @@ public class aiController : MonoBehaviour
 
     public GameObject planeBarObject;
     public Image planeBar;
-    private bool winCust;
+   public bool winCust;
     public float npcBusyTimer;
 
 
-
+    public spawnZoneManagment spawnZoneManagment;
     public bool loseCust;
     public GameObject angryImage;
 
+    public money money;
+    private bool earnMoney;
 
     public int randomLoby;
     public bool leaved;
+
+    public int[] winnableMoney;
     void Start()
     {
         randomLoby = Random.Range(10, 55);
@@ -52,6 +56,15 @@ public class aiController : MonoBehaviour
 
     void Update()
     {
+        if (earnMoney == true && npcBusyTimer <0&&npcBusyTimer > -1)
+        {
+            earnMoney = false;
+
+            npcBusyTimer = -1;
+
+            money.moneyInt = money.moneyInt + 75;
+
+        }
         if (masaTemas == true)
         {
             isWalk = false;
@@ -75,6 +88,9 @@ public class aiController : MonoBehaviour
            angryImage.SetActive(true);
             Destroy(gameObject, 11f);
             isWalk = true;
+            spawnZoneManagment.busy = false;
+            spawnZoneManagment = null;
+
         }
         if (winCust == true)
         {
@@ -83,6 +99,10 @@ public class aiController : MonoBehaviour
             _navmeshAgent.SetDestination(Target.transform.position);
             Destroy(gameObject, 7f);
             _navmeshAgent.speed = 7.5f;
+            spawnZoneManagment.busy = false;
+            spawnZoneManagment = null;
+
+            earnMoney = true;
         }
 
         if (npcBusy == false)
@@ -127,11 +147,18 @@ public class aiController : MonoBehaviour
             Target = null;
             Debug.Log("masa");
             masaTemas = true;
+            spawnZoneManagment = other.gameObject.GetComponent<spawnZoneManagment>();
+            
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        masaTemas = false;
+        if (other.gameObject.CompareTag("Desktop"))
+        {
+            masaTemas = false;
+
+        }
+
     }
 
 

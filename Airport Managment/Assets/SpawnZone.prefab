@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 2029440265225849811}
   - component: {fileID: 2029440265225849810}
   - component: {fileID: 2029440265225849775}
+  - component: {fileID: 3591193973529059497}
   m_Layer: 0
   m_Name: SpawnZone
   m_TagString: Desktop
@@ -215,6 +216,19 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!114 &3591193973529059497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2029440265225849809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a65b2b6ec3a295c4fa38d86775f7ec49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  valueMoney: 0
 --- !u!1 &4241430052291802386
 GameObject:
   m_ObjectHideFlags: 0
