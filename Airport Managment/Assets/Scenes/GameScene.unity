@@ -15691,7 +15691,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.21
   m_Speed: 3.5
-  m_Acceleration: 8
+  m_Acceleration: 18
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -27545,7 +27545,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.21
   m_Speed: 3.5
-  m_Acceleration: 8
+  m_Acceleration: 18
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -30149,7 +30149,7 @@ NavMeshAgent:
   m_AgentTypeID: 0
   m_Radius: 0.21
   m_Speed: 3.5
-  m_Acceleration: 8
+  m_Acceleration: 18
   avoidancePriority: 50
   m_AngularSpeed: 120
   m_StoppingDistance: 0
@@ -35122,7 +35122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42c16a0d4e7a3b48a26415b4820ca95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moneyInt: 50
+  moneyInt: 500
 --- !u!1 &1921998013
 GameObject:
   m_ObjectHideFlags: 0
