@@ -66,6 +66,7 @@ public class aiController : MonoBehaviour
             npcBusyTimer = -1;
 
             money.moneyInt = money.moneyInt + 75;
+            Vibrator.Vibrate(200);
 
         }
         if (masaTemas == true)
