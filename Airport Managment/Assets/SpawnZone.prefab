@@ -196,7 +196,7 @@ MonoBehaviour:
   busy: 0
   working: 0
   temas: 0
-  animator: {fileID: 0}
+  controller: {fileID: 0}
   mesh1: {fileID: 2029440265225849772}
   mesh2: {fileID: 551949195532941116}
   mesh3: {fileID: 6619473711579810376}
@@ -255,7 +255,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4241430052291802386}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.491, y: 0.552, z: 0.426}
+  m_LocalPosition: {x: -0.485, y: 0.43, z: 0.91}
   m_LocalScale: {x: 0.0081649395, y: 0.02276684, z: 0.010258738}
   m_Children: []
   m_Father: {fileID: 484522888507011789}
@@ -280,7 +280,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2bf154347ece5e5458c6f844a4b22c13, type: 3}
+  - {fileID: 2100000, guid: ea200a38ba1e50e40989ae66acf64108, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -312,15 +312,15 @@ TextMesh:
   m_GameObject: {fileID: 4241430052291802386}
   m_Text: 500$
   m_OffsetZ: 0
-  m_CharacterSize: 0.81
+  m_CharacterSize: 0.99
   m_LineSpacing: 1
   m_Anchor: 0
-  m_Alignment: 0
+  m_Alignment: 1
   m_TabSize: 4
   m_FontSize: 500
   m_FontStyle: 0
   m_RichText: 1
-  m_Font: {fileID: 12800000, guid: 2bf154347ece5e5458c6f844a4b22c13, type: 3}
+  m_Font: {fileID: 12800000, guid: ea200a38ba1e50e40989ae66acf64108, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4278190080

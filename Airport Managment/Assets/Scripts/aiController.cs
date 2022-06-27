@@ -20,6 +20,7 @@ public class aiController : MonoBehaviour
     public GameObject entry;
 
     public GameObject planeBarObject;
+    public GameObject bars;
     public Image planeBar;
    public bool winCust;
     public float npcBusyTimer;
@@ -38,6 +39,8 @@ public class aiController : MonoBehaviour
     public int[] winnableMoney;
     void Start()
     {
+        gameObject.transform.name = "npc";
+
         randomLoby = Random.Range(10, 55);
 
         entry = GameObject.FindGameObjectWithTag("entry");
@@ -80,12 +83,13 @@ public class aiController : MonoBehaviour
         }
         if (loseCust==true)
         {
-            _navmeshAgent.speed = 5f;
+            _navmeshAgent.speed = 4f;
 
             Target = exit;
             _navmeshAgent.SetDestination(Target.transform.position);
             npcBusy = true;
            angryImage.SetActive(true);
+            Destroy(bars);
             Destroy(gameObject, 11f);
             isWalk = true;
             spawnZoneManagment.busy = false;
@@ -98,7 +102,7 @@ public class aiController : MonoBehaviour
             Target = entry;
             _navmeshAgent.SetDestination(Target.transform.position);
             Destroy(gameObject, 7f);
-            _navmeshAgent.speed = 7.5f;
+            _navmeshAgent.speed = 4.5f;
             spawnZoneManagment.busy = false;
             spawnZoneManagment = null;
 
@@ -118,7 +122,7 @@ public class aiController : MonoBehaviour
         {
             npcBusyTimer -= Time.deltaTime * 2;
            
-            Destroy(planeBarObject);
+            Destroy(bars);
 
 
         }
@@ -150,6 +154,8 @@ public class aiController : MonoBehaviour
             spawnZoneManagment = other.gameObject.GetComponent<spawnZoneManagment>();
             
         }
+
+     
     }
     private void OnTriggerExit(Collider other)
     {

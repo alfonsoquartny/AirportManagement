@@ -11,6 +11,7 @@ TagManager:
   - entry
   - planeBar
   - npc
+  - spawnPos
   layers:
   - Default
   - TransparentFX
