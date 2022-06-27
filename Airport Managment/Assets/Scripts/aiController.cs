@@ -39,6 +39,8 @@ public class aiController : MonoBehaviour
     public int[] winnableMoney;
     void Start()
     {
+
+
         gameObject.transform.name = "npc";
 
         randomLoby = Random.Range(10, 55);
@@ -55,10 +57,12 @@ public class aiController : MonoBehaviour
         planeBar.fillAmount = 1;
         _navmeshAgent.speed = 0;
 
+
     }
 
     void Update()
     {
+
         if (earnMoney == true && npcBusyTimer <0&&npcBusyTimer > -1)
         {
             earnMoney = false;
