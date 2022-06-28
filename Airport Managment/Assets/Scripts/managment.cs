@@ -18,6 +18,13 @@ public class managment : MonoBehaviour
     private bool selected;
 
     public GameObject selectedNPC;
+
+    public bool spawnNpc;
+    public GameObject npc;
+
+    public sira[] sira;
+    public Transform[] siralar;
+
     void Start()
     {
         
@@ -27,6 +34,50 @@ public class managment : MonoBehaviour
     void Update()
     {
 
+        if (spawnNpc == true)
+        {
+            if (sira[0].dolu == false)
+            {
+                Instantiate(npc, siralar[0].position, Quaternion.identity);
+                sira[0].dolu = true;
+                spawnNpc = false;
+            }
+        }
+
+        if (spawnNpc == true)
+        {
+              if (sira[1].dolu == false)
+            {
+                Instantiate(npc, siralar[1].position, Quaternion.identity);
+                sira[1].dolu = true;
+                spawnNpc = false;
+            }
+        }
+
+        if (spawnNpc == true)
+        {
+          if (sira[2].dolu == false)
+            {
+                Instantiate(npc, siralar[2].position, Quaternion.identity);
+                sira[2].dolu = true;
+
+                spawnNpc = false;
+            }
+        }
+        if (spawnNpc == true)
+        {
+             if (sira[3].dolu == false)
+            {
+                Instantiate(npc, siralar[3].position, Quaternion.identity);
+                sira[3].dolu = true;
+
+                spawnNpc = false;
+            }
+        }
+          
+           
+
+        
             if (Input.touchCount == 1 && Input.GetTouch(0).phase == touchPhase)
             {
 

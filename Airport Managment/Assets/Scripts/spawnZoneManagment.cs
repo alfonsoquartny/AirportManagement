@@ -54,6 +54,7 @@ public class spawnZoneManagment : MonoBehaviour
         if (other.gameObject.CompareTag("npc"))
         {
             temas = false;
+            busy = false;
         }
     }
 

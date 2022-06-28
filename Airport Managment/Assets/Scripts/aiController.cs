@@ -14,6 +14,8 @@ public class aiController : MonoBehaviour
 
     private Animator animator;
 
+   public managment managment;
+    private GameObject managmentOb;
     public bool masaTemas;
 
     public bool isWalk;
@@ -39,7 +41,8 @@ public class aiController : MonoBehaviour
     public int[] winnableMoney;
     void Start()
     {
-
+        managmentOb = GameObject.FindGameObjectWithTag("MainCamera");
+        managment = managmentOb.GetComponent<managment>();
 
         gameObject.transform.name = "npc";
 
@@ -97,6 +100,7 @@ public class aiController : MonoBehaviour
             Destroy(bars);
             Destroy(gameObject, 11f);
             isWalk = true;
+
             spawnZoneManagment.busy = false;
             spawnZoneManagment = null;
 
@@ -105,13 +109,17 @@ public class aiController : MonoBehaviour
         {
          
             Target = entry;
+            managment.spawnNpc = true;
             _navmeshAgent.SetDestination(Target.transform.position);
             Destroy(gameObject, 7f);
             _navmeshAgent.speed = 4.5f;
+            earnMoney = true;
+
             spawnZoneManagment.busy = false;
             spawnZoneManagment = null;
 
-            earnMoney = true;
+
+      
         }
 
         if (npcBusy == false)
