@@ -27,7 +27,6 @@ public class aiController : MonoBehaviour
    public bool winCust;
     public float npcBusyTimer;
 
-
     public spawnZoneManagment spawnZoneManagment;
     public bool loseCust;
     public GameObject angryImage;
@@ -65,6 +64,7 @@ public class aiController : MonoBehaviour
 
     void Update()
     {
+     
 
         if (earnMoney == true && npcBusyTimer <0&&npcBusyTimer > -1)
         {
