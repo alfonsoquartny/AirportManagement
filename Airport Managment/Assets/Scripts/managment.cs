@@ -76,19 +76,25 @@ public class managment : MonoBehaviour
                     }
                     if (touchedObject.transform.name == "siraBuyRight"&&money.moneyInt>=500)
                     {
-                        money.moneyInt = money.moneyInt - 500;
+                       siranamer[3].startName = siranamer[3].defaultname;
+                        siranamer[4].startName = siranamer[4].defaultname;
 
                         touchedObject.SetActive(false);
 
+                        money.moneyInt = money.moneyInt - 500;
                     }
                     if (touchedObject.transform.name == "siraBuyLeft"&&money.moneyInt>=500)
                     {
+
+
+                        siranamer[5].startName = siranamer[5].defaultname;
+                        siranamer[6].startName = siranamer[6].defaultname;
+
+                        touchedObject.SetActive(false);
+
                         money.moneyInt = money.moneyInt - 500;
 
 
-                        siranamer[2].startName = siranamer[2].defaultname;
-                        siranamer[3].startName = siranamer[3].defaultname;
-                        touchedObject.SetActive(false);
 
 
                     }

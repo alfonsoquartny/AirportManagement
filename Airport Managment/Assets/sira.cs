@@ -20,7 +20,7 @@ public class sira : MonoBehaviour
     void Update()
     {
 
-        if (siras[4] == siras[0] || siras[4] == siras[1] || siras[4] == siras[2] || siras[4] == siras[3])
+        if (siras[7] == siras[0] || siras[7] == siras[1] || siras[7] == siras[2] || siras[7] == siras[3] || siras[7] == siras[4]|| siras[7] == siras[5] || siras[7] == siras[6])
         {
             canSpawn = true;
         }
@@ -45,16 +45,28 @@ public class sira : MonoBehaviour
         {
             if (siras[0].transform.name == "siraNull")
             {
-                siras[4] = siras[1];
+                siras[7] = siras[1];
                 if (siras[1].transform.name == "siraNull")
                 {
-                    siras[4] = siras[2];
+                    siras[7] = siras[2];
                     if (siras[2].transform.name == "siraNull")
                     {
-                        siras[4] = siras[3];
+                        siras[7] = siras[3];
                         if (siras[3].transform.name == "siraNull")
                         {
-                            siras[4] = null;
+                            siras[7] = siras[4];
+                            if (siras[4].transform.name == "siraNull")
+                            {
+                                siras[7] = siras[5];
+                                if (siras[5].transform.name == "siraNull")
+                                {
+                                    siras[7] = siras[6];
+                                    if (siras[6].transform.name == "siraNull")
+                                    {
+                                        siras[7] =null;
+                                    }
+                                }
+                            }
                         }
 
                     }
@@ -69,7 +81,7 @@ public class sira : MonoBehaviour
 
         if (siras[0].transform.name == "sira0")
         {
-            siras[4] = siras[0];
+            siras[7] = siras[0];
         }
     }
 }

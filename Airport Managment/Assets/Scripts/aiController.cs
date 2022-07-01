@@ -73,7 +73,7 @@ public class aiController : MonoBehaviour
 
         if (spawnBusy == false)
         {
-            spawnTarget = sira.siras[4];
+            spawnTarget = sira.siras[7];
             _navmeshAgent.SetDestination(spawnTarget.transform.position);
             speedReset.transform.position=spawnTarget.transform.position;
 
