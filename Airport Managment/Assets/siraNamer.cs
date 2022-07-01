@@ -7,6 +7,7 @@ public class siraNamer : MonoBehaviour
 
 
     public string startName;
+    public string defaultname;
 
     public bool temas;
     private aiController ai;

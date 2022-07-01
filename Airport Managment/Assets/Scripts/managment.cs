@@ -25,6 +25,8 @@ public class managment : MonoBehaviour
 
 
     public bool isdolu;
+
+    public siraNamer[] siranamer;
     void Start()
     {
         
@@ -72,7 +74,28 @@ public class managment : MonoBehaviour
                         valueObject = touchedObject;
                         value = touchedObject.GetComponent<value>();
                     }
-                        if (touchedObject.transform.name=="SpawnZone"||touchedObject.transform.name== "spawnZone(Clone)")
+                    if (touchedObject.transform.name == "siraBuyRight"&&money.moneyInt>=500)
+                    {
+                        money.moneyInt = money.moneyInt - 500;
+
+                        touchedObject.SetActive(false);
+
+                    }
+                    if (touchedObject.transform.name == "siraBuyLeft"&&money.moneyInt>=500)
+                    {
+                        money.moneyInt = money.moneyInt - 500;
+
+
+                        siranamer[2].startName = siranamer[2].defaultname;
+                        siranamer[3].startName = siranamer[3].defaultname;
+                        touchedObject.SetActive(false);
+
+
+                    }
+
+
+
+                    if (touchedObject.transform.name=="SpawnZone"||touchedObject.transform.name== "spawnZone(Clone)")
                         {
                       
                         if (spawnManagment.working == false&&money.moneyInt>=value.valueMoney)
@@ -108,7 +131,7 @@ public class managment : MonoBehaviour
             _aiController = selectedNPC.GetComponent<aiController>();
         }
 
-      
 
-    }
+
+        }
 }
