@@ -13,6 +13,7 @@ TagManager:
   - npc
   - spawnPos
   - managment
+  - sira
   layers:
   - Default
   - TransparentFX

@@ -8,6 +8,8 @@ public class aiController : MonoBehaviour
 {
 
     public GameObject Target;
+  public GameObject spawnTarget;
+    private bool spawnBusy;
   NavMeshAgent _navmeshAgent;
     public bool npcBusy;
     public GameObject exit;
@@ -38,10 +40,13 @@ public class aiController : MonoBehaviour
     public bool leaved;
 
     public int[] winnableMoney;
+   private sira sira;
     void Start()
     {
         managmentOb = GameObject.FindGameObjectWithTag("MainCamera");
+
         managment = managmentOb.GetComponent<managment>();
+        sira = GameObject.Find("Manager").GetComponent<sira>();
 
         gameObject.transform.name = "npc";
 
@@ -64,7 +69,16 @@ public class aiController : MonoBehaviour
 
     void Update()
     {
-     
+        if (spawnBusy == false)
+        {
+            spawnTarget = sira.siras[4];
+            _navmeshAgent.SetDestination(spawnTarget.transform.position);
+            gameObject.transform.rotation =spawnTarget.transform.rotation;
+        }
+        else
+        {
+            spawnTarget = null;
+        }
 
         if (earnMoney == true && npcBusyTimer <0&&npcBusyTimer > -1)
         {
@@ -134,7 +148,8 @@ public class aiController : MonoBehaviour
         if(npcBusy==true)
         {
             npcBusyTimer -= Time.deltaTime * 2;
-           
+            spawnBusy = true;
+
             Destroy(bars);
 
 
@@ -166,6 +181,11 @@ public class aiController : MonoBehaviour
             masaTemas = true;
             spawnZoneManagment = other.gameObject.GetComponent<spawnZoneManagment>();
             
+        }
+
+        if (other.gameObject.CompareTag("sira"))
+        {
+            spawnBusy = true;
         }
 
      
