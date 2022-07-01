@@ -30311,15 +30311,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4f1d4228e0731a24ab406e4048afe5e2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.305
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4f1d4228e0731a24ab406e4048afe5e2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.40000004
+      value: 0.26
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4f1d4228e0731a24ab406e4048afe5e2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -26.47
+      value: -26.6621
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4f1d4228e0731a24ab406e4048afe5e2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -33665,7 +33665,7 @@ MonoBehaviour:
   - {fileID: 333730420}
   - {fileID: 0}
   canSpawn: 0
-  timer: 13
+  timer: 11
   prefab: {fileID: 5412043591519101809, guid: d20afdf9052921a4ab46ff88fb4962ce, type: 3}
 --- !u!4 &2133173247
 Transform:
