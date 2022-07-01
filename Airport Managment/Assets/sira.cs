@@ -10,7 +10,8 @@ public class sira : MonoBehaviour
     public float timer;
     private float defaultTimer;
 
-    public GameObject prefab;
+    public GameObject[] prefab;
+
     void Start()
     {
         defaultTimer = timer;
@@ -36,7 +37,23 @@ public class sira : MonoBehaviour
 
         if (timer < 0)
         {
-            Instantiate(prefab);
+
+            var randomNpc = Random.Range(0, 3);
+            if(randomNpc == 0)
+            {
+                Instantiate(prefab[0]);
+
+            }
+            if (randomNpc == 1)
+            {
+                Instantiate(prefab[1]);
+
+            }
+            if (randomNpc == 2)
+            {
+                Instantiate(prefab[2]);
+
+            }
             timer = defaultTimer;
         }
 

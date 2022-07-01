@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: 6597608480190548230}
   - component: {fileID: 6597608480190548229}
   m_Layer: 0
-  m_Name: npc
+  m_Name: redtshirtNpc
   m_TagString: npc
   m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -204,7 +204,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6597608480190548228}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0.94}
+  m_LocalPosition: {x: 0, y: 0.5, z: -10.28152}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2679830653508649704}
@@ -285,6 +285,7 @@ MonoBehaviour:
   randomLoby: 10
   leaved: 0
   winnableMoney: 1e00000032000000370000002d0000003c000000
+  speedReset: {fileID: 0}
 --- !u!95 &6597608480190548230
 Animator:
   serializedVersion: 3
@@ -718,7 +719,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6597608480704063200}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.21628115, y: 0.09916234, z: -0.228}
+  m_LocalPosition: {x: 0.21628115, y: 0.09916234, z: -0.22799969}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6597608480190548250}
