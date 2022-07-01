@@ -266,10 +266,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 0}
+  spawnTarget: {fileID: 0}
   npcBusy: 0
   exit: {fileID: 0}
+  managment: {fileID: 0}
   masaTemas: 0
-  isWalk: 0
+  isWalk: 1
   entry: {fileID: 0}
   planeBarObject: {fileID: 0}
   bars: {fileID: 6597608481781583462}
@@ -316,7 +318,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 32
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!1 &6597608480259330778
 GameObject:
