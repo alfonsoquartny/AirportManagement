@@ -20,8 +20,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5412043590857240397}
     - target: {fileID: 6597608480190548248, guid: 52355808ec28ec94c97b8bc080623167, type: 3}
+      propertyPath: m_Height
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6597608480190548248, guid: 52355808ec28ec94c97b8bc080623167, type: 3}
       propertyPath: m_AngularSpeed
-      value: 50
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 6597608480190548248, guid: 52355808ec28ec94c97b8bc080623167, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6597608480190548250, guid: 52355808ec28ec94c97b8bc080623167, type: 3}
       propertyPath: m_RootOrder

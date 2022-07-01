@@ -39,9 +39,12 @@ public class aiController : MonoBehaviour
     public bool leaved;
 
     public int[] winnableMoney;
+    public GameObject speedReset;
    private sira sira;
     void Start()
     {
+        speedReset = GameObject.Find("speedReset");
+
         managmentOb = GameObject.FindGameObjectWithTag("MainCamera");
 
         managment = managmentOb.GetComponent<managment>();
@@ -63,7 +66,6 @@ public class aiController : MonoBehaviour
         planeBar.fillAmount = 1;
         _navmeshAgent.speed = 0;
 
-
     }
 
     void Update()
@@ -73,6 +75,7 @@ public class aiController : MonoBehaviour
         {
             spawnTarget = sira.siras[4];
             _navmeshAgent.SetDestination(spawnTarget.transform.position);
+            speedReset.transform.position=spawnTarget.transform.position;
 
         }
         else
@@ -188,7 +191,12 @@ public class aiController : MonoBehaviour
             spawnBusy = true;
         }
 
-     
+
+        if (other.gameObject.transform.name == ("speedReset") && npcBusy == false)
+        {
+            _navmeshAgent.speed = 0;
+        }
+
     }
     private void OnTriggerExit(Collider other)
     {
@@ -197,6 +205,8 @@ public class aiController : MonoBehaviour
             masaTemas = false;
 
         }
+
+       
 
     }
 
