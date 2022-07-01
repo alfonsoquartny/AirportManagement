@@ -15,6 +15,14 @@ PrefabInstance:
       propertyPath: money
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6597608480190548231, guid: 52355808ec28ec94c97b8bc080623167, type: 3}
+      propertyPath: rotationzero
+      value: 
+      objectReference: {fileID: 5412043590857240397}
+    - target: {fileID: 6597608480190548248, guid: 52355808ec28ec94c97b8bc080623167, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 6597608480190548250, guid: 52355808ec28ec94c97b8bc080623167, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -69,3 +77,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52355808ec28ec94c97b8bc080623167, type: 3}
+--- !u!1 &5412043590857240397 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6597608481657292088, guid: 52355808ec28ec94c97b8bc080623167, type: 3}
+  m_PrefabInstance: {fileID: 1194607348571712117}
+  m_PrefabAsset: {fileID: 0}

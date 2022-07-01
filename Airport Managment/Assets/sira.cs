@@ -19,7 +19,27 @@ public class sira : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      
+
+        if (siras[4] == siras[0] || siras[4] == siras[1] || siras[4] == siras[2] || siras[4] == siras[3])
+        {
+            canSpawn = true;
+        }
+        else
+        {
+            canSpawn = false;
+        }
+
+        if (canSpawn == true)
+        {
+            timer -= Time.deltaTime;
+        }
+
+        if (timer < 0)
+        {
+            Instantiate(prefab);
+            timer = defaultTimer;
+        }
+
 
         if (siras[0].transform.name=="siraNull")
         {
@@ -42,27 +62,7 @@ public class sira : MonoBehaviour
 
             }
 
-
-
-            if (siras[4] == null)
-            {
-                canSpawn = false;
-            }
-            else
-            {
-                canSpawn = true;
-
-            }
-            if (canSpawn == true)
-            {
-                timer -= Time.deltaTime;
-            }
-
-            if (timer < 0)
-            {
-                Instantiate(prefab);
-                timer = defaultTimer;
-            }
+        
 
 
         }

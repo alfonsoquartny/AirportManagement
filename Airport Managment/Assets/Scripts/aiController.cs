@@ -15,7 +15,6 @@ public class aiController : MonoBehaviour
     public GameObject exit;
 
     private Animator animator;
-
    public managment managment;
     private GameObject managmentOb;
     public bool masaTemas;
@@ -69,11 +68,12 @@ public class aiController : MonoBehaviour
 
     void Update()
     {
+
         if (spawnBusy == false)
         {
             spawnTarget = sira.siras[4];
             _navmeshAgent.SetDestination(spawnTarget.transform.position);
-            gameObject.transform.rotation =spawnTarget.transform.rotation;
+
         }
         else
         {
