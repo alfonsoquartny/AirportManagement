@@ -43,6 +43,7 @@ public class aiController : MonoBehaviour
    private sira sira;
     void Start()
     {
+        money = GameObject.Find("money").GetComponent<money>();
         speedReset = GameObject.Find("speedReset");
 
         managmentOb = GameObject.FindGameObjectWithTag("MainCamera");

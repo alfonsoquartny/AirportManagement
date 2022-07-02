@@ -118,7 +118,8 @@ public class managment : MonoBehaviour
                            _aiController.Target=touchedObject;
 
                             if (_aiController.Target == touchedObject)
-{
+                            {
+                                _aiController.Target = touchedObject;
                                 spawnManagment.busy = true;
 
                             }

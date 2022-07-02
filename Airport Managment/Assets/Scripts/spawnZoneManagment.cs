@@ -13,6 +13,7 @@ public class spawnZoneManagment : MonoBehaviour
     public MeshRenderer mesh1;
     public MeshRenderer mesh2;
     public MeshRenderer mesh3;
+
     void Start()
     {
         
@@ -21,6 +22,7 @@ public class spawnZoneManagment : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
 
         if (working == true)
         {
@@ -38,7 +40,8 @@ public class spawnZoneManagment : MonoBehaviour
             controller.isWalk=true;
         }
 
-      
+
+       
     }
     private void OnTriggerEnter(Collider other)
     {

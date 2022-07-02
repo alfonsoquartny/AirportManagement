@@ -31405,7 +31405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c42c16a0d4e7a3b48a26415b4820ca95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moneyInt: 500
+  moneyInt: 625
 --- !u!1 &1921998013
 GameObject:
   m_ObjectHideFlags: 0
@@ -34274,7 +34274,7 @@ MonoBehaviour:
   - {fileID: 333730420}
   - {fileID: 0}
   canSpawn: 0
-  timer: 12
+  timer: 11
   prefab:
   - {fileID: 6182372148760978696, guid: c7ceda8ecce6f72409948207f1da27ba, type: 3}
   - {fileID: 7427804433877334695, guid: 3c1075ed27890dc40bd5b2bbfaa0e4de, type: 3}
