@@ -29,24 +29,26 @@ public class siraNamer : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+
+    private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("npc"))
         {
-            ai=other.GetComponent<aiController>();
+            ai = other.GetComponent<aiController>();
             ai.isWalk = false;
             temas = true;
+
         }
-
-       
     }
-
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("npc"))
         {
-
+            ai = other.GetComponent<aiController>();
+            ai.isWalk = true;
             temas = false;
         }
+
+
     }
 }
