@@ -12,6 +12,8 @@ public class sira : MonoBehaviour
 
     public GameObject[] prefab;
 
+    int currentNum;
+
     void Start()
     {
         defaultTimer = timer;
@@ -39,22 +41,31 @@ public class sira : MonoBehaviour
         {
 
             var randomNpc = Random.Range(0, 3);
-            if(randomNpc == 0)
+            if (currentNum != randomNpc)
             {
-                Instantiate(prefab[0]);
+                currentNum = randomNpc;
+                if (randomNpc == 0)
+                {
+                    Instantiate(prefab[0]);
 
+                }
+                if (randomNpc == 1)
+                {
+                    Instantiate(prefab[1]);
+
+                }
+                if (randomNpc == 2)
+                {
+                    Instantiate(prefab[2]);
+
+                }
+                timer = defaultTimer;
             }
-            if (randomNpc == 1)
+            else
             {
-                Instantiate(prefab[1]);
-
+                randomNpc = Random.Range(0, 3);
             }
-            if (randomNpc == 2)
-            {
-                Instantiate(prefab[2]);
-
-            }
-            timer = defaultTimer;
+         
         }
 
 
