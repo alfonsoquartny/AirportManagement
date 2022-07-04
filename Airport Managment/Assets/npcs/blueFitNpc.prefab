@@ -1582,6 +1582,7 @@ MonoBehaviour:
   isWalk: 1
   entry: {fileID: 0}
   planeBarObject: {fileID: 0}
+  sabirBar: {fileID: 741996980438367705}
   bars: {fileID: 741996981531000978}
   planeBar: {fileID: 0}
   winCust: 0
